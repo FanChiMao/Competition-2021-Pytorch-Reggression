@@ -1,1 +1,1 @@
-# Pytorch-2021-IMBD-DataAnalyize
+# Pytorch-2021-IMBD-DataAnalyze
