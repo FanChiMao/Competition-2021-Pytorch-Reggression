@@ -53,16 +53,24 @@
     ```
     tensorboard --logdir [log path]
     ```
+- example:  
+
 
 
 # 2. Testing
 
-## 2.1 Load the model
+## 2.1 Load the model and test  
 - Model weight file direction: `checkpoints -> model` folder  
-- 
-...
-## 2.2
-...
+- Start testing: `test.py`  
+    ```
+    python test.py
+    ```
+    
+## 2.2 Score  
+- Official score calculate rule:  
+- example:  
+
+
 
 
 
