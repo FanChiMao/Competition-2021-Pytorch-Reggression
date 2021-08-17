@@ -53,8 +53,11 @@
     ```
     tensorboard --logdir [log path]
     ```
-- example:  
-
+- training loss example:  
+  <img src="figures/train_loss.jpg" alt="arch" style="zoom:100%;" />  
+  
+- validation loss example:  
+  <img src="figures/val_loss.jpg" alt="arch" style="zoom:100%;" />   
 
 
 # 2. Testing
@@ -68,9 +71,12 @@
     
 ## 2.2 Score  
 - Official score calculate rule:  
+
+  <img src="figures/train_loss.jpg" alt="arch" style="zoom:100%;" />  
+  
 - example:  
 
-
+  <img src="figures/score.jpg" alt="arch" style="zoom:100%;" />  
 
 
 
