@@ -79,6 +79,14 @@
   <img src="figures/score.jpg" alt="arch" style="zoom:100%;" />  
 
 
+# 3. Reference  
+- https://lulaoshi.info/machine-learning/neural-network/pytorch-kaggle-house-prices.html  
+- https://shashikachamod4u.medium.com/excel-csv-to-pytorch-dataset-def496b6bcc1  
+- https://blog.csdn.net/just_sort/article/details/103110806  
+
+# 4. Contact us:  
+- Chi-Mao Fan: qaz5517359@gmail.com  
+- 
 
 
 
