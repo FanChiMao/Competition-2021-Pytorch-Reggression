@@ -32,9 +32,9 @@
 
 ```
 
-# 0. Training  
+# 1. Training  
 
-## 0.1 Prepair training data  
+## 1.1 Prepair training data  
 - Official [training data](https://drive.google.com/file/d/1xj7Wpev5k48hP6nBoEFJURd-hoPy4Bzv/view?usp=sharing): 98072  
 
 - Split training data to train, val and test part:  
@@ -42,15 +42,26 @@
   - [val.csv](https://drive.google.com/file/d/1dZtR1xRfyLnoGqfuenvAWMCxprxZ8D3K/view?usp=sharing): 1000  
   - [test.csv](https://drive.google.com/file/d/1AShQtKNL_d_ePbihX2n2lEyrsGCP5fJs/view?usp=sharing): 72  
 
-## 0.2 Hyper parameters
-- `training.yaml`
+## 1.2 Set hyperparameters and train  
+- Configuration file: `training.yaml`  
+- Start training: `train.py`  
+    ```
+    python train.py
+    ```
+## 1.3 Training and validation loss curve  
+- log file direction: `checkpoints -> log` folder  
+    ```
+    tensorboard --logdir [log path]
+    ```
 
 
-# 1. Testing
+# 2. Testing
 
-## 1.1 
+## 2.1 Load the model
+- Model weight file direction: `checkpoints -> model` folder  
+- 
 ...
-## 1.2
+## 2.2
 ...
 
 
