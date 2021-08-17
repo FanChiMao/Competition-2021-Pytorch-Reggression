@@ -1,0 +1,11 @@
+TRAINING:
+  Network: 'MLP'
+  EPOCH: 300
+  LR: 0.01
+  GPU: true
+  BATCH: 100
+  VAL_AFTER_EVERY: 5
+  TRAIN_DIR: './csv_data/training/train.csv'       # path to training data
+  VAL_DIR: './csv_data/training/val.csv' # path to validation data
+  SAVE_DIR: './checkpoints'           # path to save models and images
+
