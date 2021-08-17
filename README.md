@@ -15,24 +15,24 @@
 
 其他程式碼
 ├── utils
-|   ├── csv_utils           csv檔相關函式
-|   ├── dir_utils           路徑相關函式
-|   ├── model_utils         網路模型相關函式
-|   ├── score_utils         計算分數相關函式
+|    ├── csv_utils           csv檔相關函式
+|    ├── dir_utils           路徑相關函式
+|    ├── model_utils         網路模型相關函式
+|    └── score_utils         計算分數相關函式
 ├── csv_data
-|   ├── result                   
-|   |   ├── result.csv      預測結果csv檔    
-|   ├── testing
-|   |   ├── test.csv        測試輸入csv檔           
-|   ├── training
-|   |   ├── val.csv         驗證csv檔
-|   |   ├── train.csv       訓練csv檔
-├── checkpoint
-|   ├── Network             .yaml (Network名稱)
-|   |   ├── log             存log檔的資料夾
-|   |   |   |...
-|   |   ├── model           存模型檔的資料夾
-|   |   |   |...
+|    ├── result                   
+|    |   └── result.csv      預測結果csv檔    
+|    ├── testing
+|    |   └── test.csv        測試輸入csv檔           
+|    └── training
+|        ├── val.csv         驗證csv檔
+|        └── train.csv       訓練csv檔
+└── checkpoint
+     └── Network             .yaml (Network名稱)
+         ├── log             存log檔的資料夾
+         |   └──...
+         └── model           存模型檔的資料夾
+             └──...
 
 ```
 
