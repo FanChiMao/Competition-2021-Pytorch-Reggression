@@ -74,7 +74,7 @@
 
   <img src="figures/score_rule.jpg" alt="arch" style="zoom:100%;" />  
   
-- example:  
+- Final score example:  
 
   <img src="figures/score.jpg" alt="arch" style="zoom:100%;" />  
 
