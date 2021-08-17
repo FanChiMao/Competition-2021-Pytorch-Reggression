@@ -76,11 +76,11 @@
 ## 2.2 Score  
 - Official score calculate rule:  
 
-  <img src="figures/score_rule.JPG" alt="arch" style="zoom:100%;" />  
+  <img src="figures/score_rule.JPG" alt="arch" width="500" style="zoom:100%;" />  
   
 - Final score example:  
 
-  <img src="figures/score.jpg" alt="arch" weigh="500" style="zoom:100%;" />  
+  <img src="figures/score.jpg" alt="arch" style="zoom:100%;" />  
 
 
 # 3. Reference  
