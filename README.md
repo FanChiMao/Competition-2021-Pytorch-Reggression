@@ -72,7 +72,7 @@
 ## 2.2 Score  
 - Official score calculate rule:  
 
-  <img src="figures/score_rule.jpg" alt="arch" style="zoom:100%;" />  
+  <img src="figures/score_rule.JPG" alt="arch" style="zoom:100%;" />  
   
 - Final score example:  
 
