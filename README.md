@@ -72,7 +72,7 @@
 ## 2.2 Score  
 - Official score calculate rule:  
 
-  <img src="figures/train_loss.jpg" alt="arch" style="zoom:100%;" />  
+  <img src="figures/score_rule.jpg" alt="arch" style="zoom:100%;" />  
   
 - example:  
 
