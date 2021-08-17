@@ -8,7 +8,6 @@
 ├── train.py                執行訓練檔
 ├── training.yaml           調整訓練參數
 ├── dataset.py              讀取訓練驗證資料
-├── checkpoint              儲存模型的權重檔資料夾
 ├── model.py                網路架構
 
 主要測試程式碼   
@@ -27,7 +26,8 @@
 |   ├── training
 |   |   ├── val.csv    
 |   |   ├── train.csv    
-
+├── checkpoint              儲存模型的權重檔資料夾
+|   ...  
 ......
 
 ```
