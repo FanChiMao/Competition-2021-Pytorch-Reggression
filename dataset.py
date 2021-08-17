@@ -52,8 +52,62 @@ class ValDataset(Dataset):
         self.inputs_train = torch.tensor(inputs_train, dtype=torch.float32)
         self.outputs_train = torch.tensor(outputs_train, dtype=torch.float32).view(-1, 1)
 
+    class ValDataset(Dataset):
+
+        # load the dataset
+        def __init__(self, train_path=None, val_path=None):
+            # 讀csv檔併分割訓練資料欄位()與答案欄位()
+            train_out = pd.read_csv(train_path)
+            train_total = train_out.iloc[:, 1:14].values
+
+            val_out = pd.read_csv(val_path)
+            inputs = val_out.iloc[:, 1:14].values
+            outputs = val_out.iloc[:, 14].values
+
+            # feature scaling
+            sc = StandardScaler()
+            matrix = sc.fit_transform(train_total)
+            inputs_train = sc.transform(inputs)
+            outputs_train = outputs
+
+            # 轉成張量(tensor)
+            self.inputs_train = torch.tensor(inputs_train, dtype=torch.float32)
+            self.outputs_train = torch.tensor(outputs_train, dtype=torch.float32).view(-1, 1)
+
     def __len__(self):
         return len(self.outputs_train)
 
     def __getitem__(self, idx):
         return self.inputs_train[idx], self.outputs_train[idx]
+
+
+class TestDataset(Dataset):
+
+    # load the dataset
+    def __init__(self, train_path=None, test_path=None):
+        # 讀csv檔併分割訓練資料欄位()與答案欄位()
+        train_out = pd.read_csv(train_path)
+        train_total = train_out.iloc[:, 1:14].values
+
+        test_out = pd.read_csv(test_path)
+        inputs = test_out.iloc[:, 1:14].values
+        outputs = test_out.iloc[:, 14].values
+        file_names = test_out.iloc[:, 0].values
+
+        # feature scaling
+        sc = StandardScaler()
+        matrix = sc.fit_transform(train_total)
+        inputs_test = sc.transform(inputs)
+        outputs_test = outputs
+        names = file_names
+
+        # 轉成張量(tensor)
+        self.inputs_test = torch.tensor(inputs_test, dtype=torch.float32)
+        self.outputs_test = torch.tensor(outputs_test, dtype=torch.float32).view(-1, 1)
+        self.file_name = torch.tensor(names, dtype=torch.int32).view(-1, 1)
+
+    def __len__(self):
+        return len(self.inputs_test)
+
+    def __getitem__(self, idx):
+        return self.inputs_test[idx], self.outputs_test[idx], self.file_name[idx]
