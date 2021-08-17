@@ -1,5 +1,5 @@
 # Pytorch-2021-IMBD-DataAnalyze  
--[2021全國智慧製造大數據分析競賽](https://imbd2021.thu.edu.tw/)  
+- [2021全國智慧製造大數據分析競賽](https://imbd2021.thu.edu.tw/)  
 
 ```
 ├── README.md    
