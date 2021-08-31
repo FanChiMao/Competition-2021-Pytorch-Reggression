@@ -11,7 +11,7 @@ from utils.score_utils import calculate_score_B, calculate_score_A
 from dataset import TestDataset
 from model import MLP
 
-model = MLP(n_inputs=13, hidden_layer1=128, hidden_layer2=128, hidden_layer3=64)
+model = MLP(n_inputs=13, hidden_layer1=128, hidden_layer2=256, hidden_layer3=128)
 
 
 def test():
@@ -19,9 +19,9 @@ def test():
     parser = argparse.ArgumentParser(description='Data Regression')
 
     parser.add_argument('--train_dir', default='./csv_data/training/train.csv', type=str)
-    parser.add_argument('--test_dir', default='./csv_data/testing/test.csv', type=str)
+    parser.add_argument('--test_dir', default='./csv_data/testing/2021test0831.csv', type=str)
     parser.add_argument('--result_dir', default='./csv_data/result/', type=str)
-    parser.add_argument('--weights', default='./checkpoints/MLP/model/model_best.pth', type=str)
+    parser.add_argument('--weights', default='./colab ver/model_best.pth', type=str)
     parser.add_argument('--gpus', default='0', type=str, help='CUDA_VISIBLE_DEVICES')
 
     args = parser.parse_args()
@@ -37,14 +37,14 @@ def test():
     test_dir = args.test_dir
 
     test_dataset = TestDataset(train_dir, test_dir)
-    test_loader = DataLoader(dataset=test_dataset, batch_size=1, shuffle=False, num_workers=0)
+    test_loader = DataLoader(dataset=test_dataset, batch_size=100, shuffle=False, num_workers=0)
 
     results = []
     score = 0
     max_single_score = 0
     print('===> Start testing~~')
     with torch.no_grad():
-        for ii, data_test in enumerate(tqdm(test_loader, ncols=70, leave=False), 0):
+        for ii, data_test in enumerate(tqdm(test_loader, ncols=50, leave=False), 0):
             torch.cuda.ipc_collect()
             torch.cuda.empty_cache()
 
@@ -58,8 +58,8 @@ def test():
             for batch in range(len(predict)):
                 results.append([file_names[batch].item(), predict[batch].item()])
                 single_score = abs(predict[batch].item() - answer[batch].item())
-                score += single_score
-
+                if single_score < 10:
+                    score += 1
                 if single_score > max_single_score:
                     max_single_score = single_score
 
