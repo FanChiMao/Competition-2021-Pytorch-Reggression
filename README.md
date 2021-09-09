@@ -40,9 +40,9 @@
     | 3           |0	|23.5 |23.5 |23.6 |23.6	|23.8 |24.3 |23.6 |23.5 |22.6  |23.3  |	23.1 |22.3  |0.6   |  
     | 4           |0	|23.5 |23.5 |23.6 |23.6	|23.8 |24.3 |23.6 |23.5 |22.6  |23.3  |	23.1 |22.3  |-0.6  |  
     | 5           |0	|23.5 |23.6 |23.6 |23.6	|23.8 |24.3 |23.6 |23.5 |22.6  |23.3  |	23.1 |22.3  |-0.3  |  
-    | ......      |...	|...  |...  |...  |...  |...  |...  |...  |...  |...   |...   |...   |...   |... .  |  
+    | ......      |...	|...  |...  |...  |...  |...  |...  |...  |...  |...   |...   |...   |...   |...   |  
     
-- CSV to independent data
+- CSV to independent data  
   Because the training data has some deviations which the same input feature values get different output results as showed below:  
   
     | Data number | F1  | F2  | F3  | F4  | F5  | F6  | F7  | F8  | F9  | F10  | F11  | F12  | F13  |Output|  
