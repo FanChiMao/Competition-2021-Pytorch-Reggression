@@ -24,7 +24,7 @@
 
 ## 2.2 Load the model or pretrained model    
 - Pretrained model(MLP: 13-128-256-128-1): model_best.pth  
-- 
+
 ## 2.3 Set hyperparameters and start testing  
 - Example:  
 <img src="https://i.ibb.co/1sfj02q/test-set.jpg" alt="test-set" border="0"></a>  
