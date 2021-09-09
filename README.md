@@ -56,16 +56,17 @@
 - Configuration file: `training.yaml`  
 
   ```
-  TRAINING:
+TRAINING:
   Network: 'MLP'
-      EPOCH: 200
-      LR: 0.01
-      GPU: true
-      BATCH: 100
-      VAL_AFTER_EVERY: 1
-      TRAIN_DIR: './csv_data/training/train.csv'       # path to training data
-      VAL_DIR: './csv_data/training/val.csv' # path to validation data
-      SAVE_DIR: './checkpoints'           # path to save models and images
+  EPOCH: 150
+  LR: 0.001
+  GPU: true
+  BATCH: 10
+  VAL_RATE: 0.8  # split validation set from training set
+  VAL_AFTER_EVERY: 1  # save the model per ? epoch
+  TRAIN_DIR: './csv_data/training/independent_mean.csv'  # path to training data
+  SAVE_DIR: './checkpoints'  # path to save models and images
+
 
   ```
   
