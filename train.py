@@ -140,16 +140,19 @@ for epoch in range(start_epoch, Train['EPOCH'] + 1):
                        os.path.join(model_dir, "best_score_model.pth"))
 
         print(
-            'validation: epoch %d Loss: %.4f Score: %.4f\n'
+            'validation: Loss: %.4f Score: %.4f\n'
             '  -> mini_loss_epoch  %d Best_loss %.4f \n'
             '  -> best_score_epoch %d Best_score %.4f'
-            % (epoch, epoch_val_loss/len(val_loader), score,
+            % (epoch_val_loss/len(val_loader), score,
                best_epoch_loss, best_val_loss/len(val_loader),
                best_epoch_score, best_score))
 
+        writer.add_scalar('val/scoreA', scoreA, epoch)
+        writer.add_scalar('val/scoreB', scoreB, epoch)
         writer.add_scalar('val/score', score, epoch)
         writer.add_scalar('val/loss', epoch_val_loss/len(val_loader), epoch)
-    print('training: epoch [{:3d}/{}] Loss: {:.4f}'.format(epoch, Train['EPOCH'] + 1, epoch_loss / len(train_loader)))
+    print('  training: Loss: {:.4f}                   epoch [{:3d}/{}] '
+          .format(epoch_loss/len(train_loader), epoch, Train['EPOCH'] + 1))
     print("------------------------------------------------------------------")
     torch.save({'epoch': epoch, 'state_dict': model.state_dict(), 'optimizer': optimizer.state_dict()},
                os.path.join(model_dir, "model_latest.pth"))
