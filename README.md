@@ -91,12 +91,12 @@
 - Start testing: `demo.py`  
   
     ```
-    python test.py
+    python demo.py
     ```
     
 ## 2.3 Score  
 - Official score calculate rule:  
-  <img src="figures/score_rule.JPG" alt="arch" width="500" style="zoom:100%;" />  
+  <img src="figures/score_rule.JPG" alt="arch" width="600" style="zoom:100%;" />  
 
 # 3. Reference  
 - https://lulaoshi.info/machine-learning/neural-network/pytorch-kaggle-house-prices.html  
