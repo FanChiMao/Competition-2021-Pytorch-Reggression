@@ -133,7 +133,7 @@ for epoch in range(start_epoch, Train['EPOCH'] + 1):
             torch.save({'epoch': epoch, 'state_dict': model.state_dict(), 'optimizer': optimizer.state_dict()},
                        os.path.join(model_dir, "mini_loss_model.pth"))
 
-        if score > best_score:
+        if score >= best_score:
             best_score = score
             best_epoch_score = epoch
             torch.save({'epoch': epoch, 'state_dict': model.state_dict(), 'optimizer': optimizer.state_dict()},
