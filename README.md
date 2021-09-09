@@ -2,16 +2,18 @@
 - [2021全國智慧製造大數據分析競賽](https://imbd2021.thu.edu.tw/)  
 
 ```
-├── README.md    
+├── README.md 
 
 主要訓練程式碼
 ├── train.py                執行訓練檔
 ├── training.yaml           調整訓練參數
 ├── dataset.py              讀取訓練驗證資料
 ├── model.py                網路架構
+└── checkpoint              訓練完成存模型及log的資料夾
 
 主要測試程式碼   
-├── test.py                 執行測試檔      
+├── demo.py                 執行預測並匯出結果csv
+└── test.py                 執行預測並計算成績(有答案)
 
 其他程式碼
 ├── utils
@@ -20,19 +22,10 @@
 |    ├── model_utils         網路模型相關函式
 |    └── score_utils         計算分數相關函式
 ├── csv_data
-|    ├── result                   
-|    |   └── result.csv      預測結果csv檔    
-|    ├── testing
-|    |   └── test.csv        測試輸入csv檔           
-|    └── training
-|        ├── val.csv         驗證csv檔
-|        └── train.csv       訓練csv檔
-└── checkpoint
-     └── Network             .yaml (Network名稱)
-         ├── log             存log檔的資料夾
-         |   └──...
-         └── model           存模型檔的資料夾
-             └──...
+|    ├── testing             測試csv資料夾    
+|    └── training            訓練csv資料夾
+└── colab ver_               Colab版本
+
 
 ```
 
