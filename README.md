@@ -35,6 +35,7 @@
 ## 1.2 Set hyperparameters and train  
 - Configuration file: `training.yaml`  
 - Start training: `train.py`  
+
     ```
     python train.py
     ```  
@@ -53,7 +54,7 @@
 ## 2.2 Load the model and test  
 - Model weight file direction: `checkpoints -> model` folder  
 - Start testing: `demo.py`  
-
+  
     ```
     python test.py
     ```
