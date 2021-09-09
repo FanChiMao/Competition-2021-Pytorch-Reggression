@@ -40,6 +40,7 @@
     ```  
 ## 1.3 Training and validation loss curve  
 - log file direction: `checkpoints -> log` folder  
+
     ```
     tensorboard --logdir [log path]
     ```
@@ -52,6 +53,7 @@
 ## 2.2 Load the model and test  
 - Model weight file direction: `checkpoints -> model` folder  
 - Start testing: `demo.py`  
+
     ```
     python test.py
     ```
