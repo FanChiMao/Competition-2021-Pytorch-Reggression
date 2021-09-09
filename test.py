@@ -18,7 +18,7 @@ def test():
     torch.multiprocessing.freeze_support()
     parser = argparse.ArgumentParser(description='Data Regression')
 
-    parser.add_argument('--train_dir', default='./csv_data/training/train.csv', type=str)
+    parser.add_argument('--train_dir', default='./csv_data/training/independent_mean.csv', type=str)
     parser.add_argument('--test_dir', default='./csv_data/testing/2021test0831.csv', type=str)
     parser.add_argument('--result_dir', default='./csv_data/result/', type=str)
     parser.add_argument('--weights', default='./colab ver/model_best.pth', type=str)
