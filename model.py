@@ -6,11 +6,11 @@ class MLP(nn.Module):
     def __init__(self, n_inputs, hidden_layer1, hidden_layer2, hidden_layer3):
         super(MLP, self).__init__()
         self.layer_1 = nn.Linear(n_inputs, hidden_layer1)
-        self.act1 = nn.PReLU()
+        self.act1 = nn.ReLU()
         self.layer_2 = nn.Linear(hidden_layer1, hidden_layer2)
-        self.act2 = nn.PReLU()
+        self.act2 = nn.ReLU()
         self.layer_3 = nn.Linear(hidden_layer2, hidden_layer3)
-        self.act3 = nn.PReLU()
+        self.act3 = nn.ReLU()
         self.layer_4 = nn.Linear(hidden_layer3, 1)
         self.act4 = nn.LeakyReLU(0.2)
 
