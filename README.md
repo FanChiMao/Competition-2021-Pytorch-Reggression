@@ -31,7 +31,7 @@
 
 ## 1.1 Prepair training data  
 - Official [training data](https://drive.google.com/file/d/1xj7Wpev5k48hP6nBoEFJURd-hoPy4Bzv/view?usp=sharing): 98072  
-- Data format (Our objective is entering the input features `F1~F13` and predict the final `Output`)  
+- Data format (Our objective is entering the input features `F1 ~ F13` and predict the final `Output`)  
 
     | Data number | F1  | F2  | F3  | F4  | F5  | F6  | F7  | F8  | F9  | F10  | F11  | F12  | F13  |Output|  
     | ----------- |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:----:|:----:|:----:|:----:|:----:|  
@@ -40,11 +40,35 @@
     | 3           |0	|23.5 |23.5 |23.6 |23.6	|23.8 |24.3 |23.6 |23.5 |22.6  |23.3  |	23.1 |22.3  |0.6   |  
     | 4           |0	|23.5 |23.5 |23.6 |23.6	|23.8 |24.3 |23.6 |23.5 |22.6  |23.3  |	23.1 |22.3  |-0.6  |  
     | 5           |0	|23.5 |23.6 |23.6 |23.6	|23.8 |24.3 |23.6 |23.5 |22.6  |23.3  |	23.1 |22.3  |-0.3  |  
-    | ......      |..	|...  |...  |...  |...  |...  |...  |...  |...  |...   |...   |...   |...   |...   |  
+    | ......      |...	|...  |...  |...  |...  |...  |...  |...  |...  |...   |...   |...   |...   |... .  |  
     
+- CSV to independent data
+  Because the training data has some deviations which the same input feature values get different output results as showed below:  
+  
+    | Data number | F1  | F2  | F3  | F4  | F5  | F6  | F7  | F8  | F9  | F10  | F11  | F12  | F13  |Output|  
+    | ----------- |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:----:|:----:|:----:|:----:|:----:|  
+    | 1           |0	|23.5 |23.6 |23.6 |23.6	|23.8 |24.3 |23.6 |23.5 |22.6  |23.3  |	23.1 |22.3  |0     |  
+    | 2           |0	|23.5 |23.6 |23.6 |23.6	|23.8 |24.3 |23.6 |23.5 |22.6  |23.3  |	23.1 |22.3  |-0.6  |  
+    
+  You could run `csv_utils.py` to let all training data are independent with mean or mediam value of output.  
     
 ## 1.2 Set hyperparameters and train  
 - Configuration file: `training.yaml`  
+
+  ```
+  TRAINING:
+  Network: 'MLP'
+  EPOCH: 200
+  LR: 0.01
+  GPU: true
+  BATCH: 100
+  VAL_AFTER_EVERY: 1
+  TRAIN_DIR: './csv_data/training/train.csv'       # path to training data
+  VAL_DIR: './csv_data/training/val.csv' # path to validation data
+  SAVE_DIR: './checkpoints'           # path to save models and images
+
+  ```
+  
 - Start training: `train.py`  
 
     ```
@@ -72,7 +96,6 @@
     
 ## 2.3 Score  
 - Official score calculate rule:  
-
   <img src="figures/score_rule.JPG" alt="arch" width="500" style="zoom:100%;" />  
 
 # 3. Reference  
