@@ -2,7 +2,7 @@
 - [2021全國智慧製造大數據分析競賽](https://imbd2021.thu.edu.tw/)  
 
 ```
-├── README.md 
+└── README.md 
 
 主要訓練程式碼
 ├── train.py                執行訓練檔
@@ -25,56 +25,41 @@
 |    ├── testing             測試csv資料夾    
 |    └── training            訓練csv資料夾
 └── colab ver_               Colab版本
+```  
 
-
-```
-
-# 1. Training  
+# 1. Training   
 
 ## 1.1 Prepair training data  
 - Official [training data](https://drive.google.com/file/d/1xj7Wpev5k48hP6nBoEFJURd-hoPy4Bzv/view?usp=sharing): 98072  
-
-- Split training data to train, val and test part:  
-  - [train.csv](https://drive.google.com/file/d/1L389britWH1_e1Xb_3XACHeV0Yz2RwqV/view?usp=sharing): 97000  
-  - [val.csv](https://drive.google.com/file/d/1dZtR1xRfyLnoGqfuenvAWMCxprxZ8D3K/view?usp=sharing): 1000  
-  - [test.csv](https://drive.google.com/file/d/1AShQtKNL_d_ePbihX2n2lEyrsGCP5fJs/view?usp=sharing): 72  
 
 ## 1.2 Set hyperparameters and train  
 - Configuration file: `training.yaml`  
 - Start training: `train.py`  
     ```
     python train.py
-    ```
+    ```  
 ## 1.3 Training and validation loss curve  
 - log file direction: `checkpoints -> log` folder  
     ```
     tensorboard --logdir [log path]
     ```
-- training loss example:  
-  <img src="figures/train_loss.jpg" alt="arch" style="zoom:100%;" />  
-  
-- validation loss example:  
-  <img src="figures/val_loss.jpg" alt="arch" style="zoom:100%;" />   
-
 
 # 2. Testing
+## 2.1 Prepair preliminary testing data  
+- Official [preliminary testing data](https://drive.google.com/file/d/17b03rxEfXTGlcSLJCv-W-ctTWsYwhA3c/view?usp=sharing): 7222  
 
-## 2.1 Load the model and test  
+
+## 2.2 Load the model and test  
 - Model weight file direction: `checkpoints -> model` folder  
-- Start testing: `test.py`  
+- Start testing: `demo.py`  
     ```
     python test.py
     ```
     
-## 2.2 Score  
+## 2.3 Score  
 - Official score calculate rule:  
 
   <img src="figures/score_rule.JPG" alt="arch" width="500" style="zoom:100%;" />  
-  
-- Final score example:  
-
-  <img src="figures/score.jpg" alt="arch" style="zoom:100%;" />  
-
 
 # 3. Reference  
 - https://lulaoshi.info/machine-learning/neural-network/pytorch-kaggle-house-prices.html  
