@@ -5,10 +5,6 @@
 ## 1.1 Prepair training data  
 - Official [training data](https://drive.google.com/file/d/1xj7Wpev5k48hP6nBoEFJURd-hoPy4Bzv/view?usp=sharing): 98072  
 
-- Split training data to train, val and test part:  
-  - [train.csv](https://drive.google.com/file/d/1L389britWH1_e1Xb_3XACHeV0Yz2RwqV/view?usp=sharing): 97000  
-  - [val.csv](https://drive.google.com/file/d/1dZtR1xRfyLnoGqfuenvAWMCxprxZ8D3K/view?usp=sharing): 1000  
-  - [test.csv](https://drive.google.com/file/d/1AShQtKNL_d_ePbihX2n2lEyrsGCP5fJs/view?usp=sharing): 72  
 
 ## 1.2 Upload relevant csv data to colab  
 - Example:  
@@ -21,23 +17,23 @@
 
 
 
-# 2. Testing
+# 2. Testing  
+## 2.1 Prepair preliminary testing data  
 
-## 2.1 Load the model or pretrained model    
-- Pretrained model(MLP: 13-128-256-128-1): [model_best.pth](https://drive.google.com/file/d/1iimuaBDnGSLTyGZLR-vB-O9tGtkMIeo1/view?usp=sharing)  
-## 2.2 Set hyperparameters and start testing  
+- Official [preliminary testing data](https://drive.google.com/file/d/17b03rxEfXTGlcSLJCv-W-ctTWsYwhA3c/view?usp=sharing): 7222  
+
+## 2.2 Load the model or pretrained model    
+- Pretrained model(MLP: 13-128-256-128-1): model_best.pth  
+- 
+## 2.3 Set hyperparameters and start testing  
 - Example:  
 <img src="https://i.ibb.co/1sfj02q/test-set.jpg" alt="test-set" border="0"></a>  
 
 ## 2.3 Score  
 - Official score calculate rule:  
 
-  <img src="../figures/score_rule.JPG" alt="arch" width="500" style="zoom:100%;" />  
+  <img src="../figures/score_rule.JPG" alt="arch" width="600" style="zoom:100%;" />  
   
-- Final score example:  
-
-  <img src="https://i.ibb.co/Dg2y3WZ/result.jpg" alt="result" border="0"></a>
-
 - Result csv will generate on the result_dir and save to "result.csv"  
   <img src="https://i.ibb.co/WGDRrNr/csv-result.jpg" alt="csv-result" border="0"></a>  
   
