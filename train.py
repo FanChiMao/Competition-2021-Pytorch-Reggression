@@ -71,6 +71,7 @@ print(f'''==> Training details:
 ------------------------------------------------------------------
     Network:            {Train['Network']}
     Training data:      {len(train_data)}
+    Validation data:    {len(val_data)}
     Start/End epochs:   {str(start_epoch) + '~' + str(Train['EPOCH'] + 1)}
     Batch sizes:        {Train['BATCH']}
     Learning rate:      {Train['LR']}
