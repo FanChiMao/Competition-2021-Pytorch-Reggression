@@ -17,14 +17,14 @@
 
 其他程式碼
 ├── utils
-|    ├── csv_utils           csv檔相關函式
-|    ├── dir_utils           路徑相關函式
-|    ├── model_utils         網路模型相關函式
-|    └── score_utils         計算分數相關函式
+|    ├── csv_utils          csv檔相關函式
+|    ├── dir_utils          路徑相關函式
+|    ├── model_utils        網路模型相關函式
+|    └── score_utils        計算分數相關函式
 ├── csv_data
-|    ├── testing             測試csv資料夾    
-|    └── training            訓練csv資料夾
-└── colab ver_               Colab版本
+|    ├── testing            測試csv資料夾    
+|    └── training           訓練csv資料夾
+└── colab ver_              Colab版本
 ```  
 
 # 1. Training   
