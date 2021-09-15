@@ -6,17 +6,17 @@ torch.backends.cudnn.benchmark = True
 
 import torch.nn as nn
 from torch.utils.data import DataLoader
-import dataset
+import torch.optim as optim
 import random
-from dataset import TrainDataset, ValDataset
+from dataset import TrainDataset
 from utils.score_utils import calculate_score_A, calculate_score_B
-import time
 import numpy as np
 import utils
 from model import MLP
 from tqdm import tqdm
 from tensorboardX import SummaryWriter
 from sklearn.model_selection import train_test_split
+from warmup_scheduler import GradualWarmupScheduler
 
 ## Set Seeds
 random.seed(1234)
@@ -55,13 +55,19 @@ if Train['GPU']:
 # Optimizer
 optimizer = torch.optim.Adam(model.parameters(), lr=Train['LR'])
 
+## Scheduler (Strategy)
+warmup_epochs = 3
+scheduler_cosine = optim.lr_scheduler.CosineAnnealingLR(optimizer, Train['EPOCH'] - warmup_epochs, eta_min=float(Train['LR_MIN']))
+scheduler = GradualWarmupScheduler(optimizer, multiplier=1, total_epoch=warmup_epochs, after_scheduler=scheduler_cosine)
+scheduler.step()
+
 # Loss function
 criterion = nn.MSELoss()
 
 # DataLoaders
 print('==> Data preparation')
 total_dataset = TrainDataset(train_dir)
-train_data, val_data = train_test_split(total_dataset, random_state=777, train_size=0.8)
+train_data, val_data = train_test_split(total_dataset, random_state=99, train_size=Train['VAL_RATE'])
 train_loader = DataLoader(dataset=train_data, batch_size=Train['BATCH'],
                           shuffle=True, num_workers=0, drop_last=False, pin_memory=False)
 val_loader = DataLoader(dataset=val_data, batch_size=1, shuffle=False, num_workers=0,
@@ -86,6 +92,7 @@ best_epoch_loss = 0
 best_epoch_score = 0
 for epoch in range(start_epoch, Train['EPOCH'] + 1):
     epoch_loss = 0
+    y_max = 0
     model.train()
     for i, data in enumerate(tqdm(train_loader, ncols=50, total=len(train_loader), leave=True), 0):
 
@@ -149,12 +156,15 @@ for epoch in range(start_epoch, Train['EPOCH'] + 1):
 
         writer.add_scalar('val/scoreA', scoreA, epoch)
         writer.add_scalar('val/scoreB', scoreB, epoch)
+        writer.add_scalar('val/y', y, epoch)
         writer.add_scalar('val/score', score, epoch)
         writer.add_scalar('val/loss', epoch_val_loss/len(val_loader), epoch)
     print('  training: Loss: {:.4f}                   epoch [{:3d}/{}] '
-          .format(epoch_loss/len(train_loader), epoch, Train['EPOCH'] + 1))
+          .format(epoch_loss/len(train_loader), epoch, Train['EPOCH']))
     print("------------------------------------------------------------------")
     torch.save({'epoch': epoch, 'state_dict': model.state_dict(), 'optimizer': optimizer.state_dict()},
                os.path.join(model_dir, "model_latest.pth"))
+    scheduler.step()
     writer.add_scalar('train/loss', epoch_loss / len(train_loader), epoch)
+    writer.add_scalar('train/lr', scheduler.get_lr()[0], epoch)
 writer.close()
