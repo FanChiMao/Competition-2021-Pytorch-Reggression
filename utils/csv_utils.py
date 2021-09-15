@@ -42,10 +42,13 @@ def toIndependent_csv(csv_path=None, save_path=None, save_name='independent'):
         for ii, out in enumerate(tqdm(have_showed_output)):
 
             # 輸出為平均值
-            final_output = statistics.mean(out)
+            # final_output = statistics.mean(out)
 
             # 輸出為中位數
             # final_output = statistics.median(out)
+            
+            # 輸出為眾數
+            final_output = statistics.mode(out)
 
             w.writerow([count, *final_indep_feat[ii], final_output])  # *是把array拆開成tuple
             count += 1
