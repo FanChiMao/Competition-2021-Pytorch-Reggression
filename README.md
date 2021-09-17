@@ -28,9 +28,9 @@
 ```  
 # 0. Competition result  
 - Preliminary  
-    - [Explain File](# 雲端網址)  
-    - [Test Result](# 雲端網址)  
-    - [Test Report](# 雲端網址)  
+    - [Explain File](https://drive.google.com/~~~~)  
+    - [Test Result](https://drive.google.com/~~~~)  
+    - [Test Report](https://drive.google.com/~~~~)  
 
 # 1. Training   
 
