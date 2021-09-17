@@ -28,8 +28,9 @@
 ```  
 # 0. Competition result  
 - Preliminary  
-    - Explain File:  
-    - Test Report:  
+    - [Explain File](# 雲端網址)  
+    - [Test Result](# 雲端網址)  
+    - [Test Report](# 雲端網址)  
 
 # 1. Training   
 
