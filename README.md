@@ -63,10 +63,11 @@
   ```
     TRAINING:
       Network: 'MLP'
-      EPOCH: 150
-      LR: 0.001
+      EPOCH: 1000
+      LR: 0.01
+      LR_MIN: 0.0001
       GPU: true
-      BATCH: 10
+      BATCH: 1000
       VAL_RATE: 0.8  # split validation set from training set
       VAL_AFTER_EVERY: 1  # save the model per ? epoch
       TRAIN_DIR: './csv_data/training/independent_mean.csv'  # path to training data
