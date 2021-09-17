@@ -26,6 +26,10 @@
 |    └── training           訓練csv資料夾
 └── colab ver_              Colab版本
 ```  
+# 0. Competition result  
+- Preliminary  
+    - Explain File:  
+    - Test Report:  
 
 # 1. Training   
 
