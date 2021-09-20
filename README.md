@@ -98,7 +98,7 @@
 - Start testing: `demo.py`  
   
     ```
-    python demo.py
+    python demo.py  
     ```
     
 ## 2.3 Score  
