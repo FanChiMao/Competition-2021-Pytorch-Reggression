@@ -21,7 +21,9 @@ def demo():
     parser.add_argument('--train_dir', default='./csv_data/training/independent_mean.csv', type=str)
     parser.add_argument('--test_dir', default='./csv_data/testing/2021test0831.csv', type=str)
     parser.add_argument('--result_dir', default='.', type=str)
-    parser.add_argument('--weights', default='./checkpoints/MLP/models/best_score_model.pth', type=str)
+    parser.add_argument('--save_name', default='result', type=str)
+    parser.add_argument('--weights',
+                        default='./pretrained.pth', type=str)
     parser.add_argument('--gpus', default='0', type=str, help='CUDA_VISIBLE_DEVICES')
 
     args = parser.parse_args()
@@ -40,8 +42,6 @@ def demo():
     test_loader = DataLoader(dataset=test_dataset, batch_size=1, shuffle=False, num_workers=0)
 
     results = []
-    score = 0
-    max_single_score = 0
     print('===> Start testing~~')
     with torch.no_grad():
         for ii, data_test in enumerate(tqdm(test_loader, ncols=50, leave=True), 0):
@@ -58,7 +58,7 @@ def demo():
                 results.append([file_names[batch].item(), predict[batch].item()])
 
 
-    write_csv(data=results, csv_path=args.result_dir, save_name='results')
+    write_csv(data=results, csv_path=args.result_dir, save_name=args.save_name)
     print('===> Finish writing csv data!')
 
 
