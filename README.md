@@ -110,7 +110,7 @@
     
 ## 2.3 Score  
 - Official score calculate rule:  
-  <img src="figures/score_rule.JPG" alt="arch" width="600" style="zoom:100%;" />  
+  <img src="https://github.com/FanChiMao/Pytorch-2021-IMBD-Reggression/blob/main/figures/score_rule.JPG" alt="arch" width="600" style="zoom:100%;" />  
 
 # 3. Reference  
 - https://lulaoshi.info/machine-learning/neural-network/pytorch-kaggle-house-prices.html  
