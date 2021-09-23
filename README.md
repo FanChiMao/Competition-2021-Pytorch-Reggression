@@ -94,6 +94,13 @@
 
 
 ## 2.2 Load the model and test  
+- Pretrained model:  
+  - [MLP 13-128-256-128-1 mean 0.8](https://drive.google.com/file/d/1vpIN1N8Xfaxp7h4iz8obXfX7Oy1u_6Um/view?usp=sharing)  
+  - [MLP 13-128-256-128-1 mean 0.9](https://drive.google.com/file/d/17m4Hl1eZGfNbYU0eFcxVHqWXHlkVBTpc/view?usp=sharing)  
+  - [MLP 13-128-256-128-1 median 0.8](https://drive.google.com/file/d/128De9g4p_i0reXA7YYXJaRxXq6GyYya9/view?usp=sharing)  
+  - [MLP 13-128-256-256-256-128-1 mean 0.8](https://drive.google.com/file/d/1K6RQYvPYYKmWcTYGP6Y7ZVRK2Os61_iz/view?usp=sharing)  
+
+
 - Model weight file direction: `checkpoints -> model` folder  
 - Start testing: `demo.py`  
   
