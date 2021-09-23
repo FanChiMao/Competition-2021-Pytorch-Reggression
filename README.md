@@ -117,11 +117,5 @@
 - https://shashikachamod4u.medium.com/excel-csv-to-pytorch-dataset-def496b6bcc1  
 - https://blog.csdn.net/just_sort/article/details/103110806  
 
-  
-# 4. Contact us:  
-- Chi-Mao Fan: qaz5517359@gmail.com  
-- Yu-Fang Huang: lin12099@yahoo.com.tw  
-- Kai-Hua Yeh: kateyehyeh@gmail.com  
-- 
 
 
