@@ -3,8 +3,7 @@
 初賽繳交資料
 ├── ExplainFile             環境與程式說明
 ├── TestReport              測驗報告
-├── TestResult              測驗結果
-└── checkpoint              訓練完成存模型及log的資料夾
+└── TestResult              測驗結果
 
 
 
