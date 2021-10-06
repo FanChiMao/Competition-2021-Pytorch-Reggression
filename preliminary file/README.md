@@ -1,7 +1,7 @@
 
 └── README.md  
 
-初賽繳交資料
+初賽繳交資料  
 ├── ExplainFile             環境與程式說明  
 ├── TestReport              測驗報告  
 └── TestResult              測驗結果  
