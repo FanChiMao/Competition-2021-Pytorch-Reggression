@@ -35,13 +35,13 @@
 - Preliminary result  
   - Participating teams: 118  
   - [Official Preliminary list](https://drive.google.com/file/d/15U9mXZLw6O-_010FUo8QVYBELv4PACcC/view?usp=sharing)  
-  - [Official Finalists](https://drive.google.com/file/d/1_6yPpp-ZeFvrYWak8JPKpFzeAeXgGkwP/view?usp=sharing)  
 
 - Finals uploaded data  
-  [Confidentiality agreement](https://drive.google.com/file/d/18mQ8Gj6O1IEgoJE9g3VeeQp-VlzmTuMb/view?usp=sharing) which couldn't publish the finals' data!
+  - [Confidentiality agreement](https://drive.google.com/file/d/18mQ8Gj6O1IEgoJE9g3VeeQp-VlzmTuMb/view?usp=sharing) which couldn't publish the finals' data!
 
 - Finals result  
   - Participating teams: 31  
+  - [Official Finalists](https://drive.google.com/file/d/1_6yPpp-ZeFvrYWak8JPKpFzeAeXgGkwP/view?usp=sharing)  
 
 
 # 1. Training   
