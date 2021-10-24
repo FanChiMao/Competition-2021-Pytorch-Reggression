@@ -27,10 +27,15 @@
 └── colab ver_              Colab版本
 ```  
 # 0. Competition result  
-- Preliminary  
-    - [Explain File](https://drive.google.com/file/d/1Gpo4ZX1VsPFwPaziXvJywOSG_OVPekNr/view?usp=sharing)  
-    - [Test Result](https://drive.google.com/file/d/1rZZ0k7-cOi32kJDaIHenxfYZJqKRJcFo/view?usp=sharing)  
-    - [Test Report](https://drive.google.com/file/d/1vYPjHpsvyp_bYV4o27Jkvc-ftF0_sLav/view?usp=sharing)  
+- Preliminary data upload  
+  - [Explain File](https://drive.google.com/file/d/1Gpo4ZX1VsPFwPaziXvJywOSG_OVPekNr/view?usp=sharing)  
+  - [Test Result](https://drive.google.com/file/d/1rZZ0k7-cOi32kJDaIHenxfYZJqKRJcFo/view?usp=sharing)  
+  - [Test Report](https://drive.google.com/file/d/1vYPjHpsvyp_bYV4o27Jkvc-ftF0_sLav/view?usp=sharing)  
+
+- Preliminary result  
+  - [Official Preliminary list](https://drive.google.com/file/d/15U9mXZLw6O-_010FUo8QVYBELv4PACcC/view?usp=sharing)  
+  - [Official Finalists](https://drive.google.com/file/d/1_6yPpp-ZeFvrYWak8JPKpFzeAeXgGkwP/view?usp=sharing)  
+ 
 
 # 1. Training   
 
