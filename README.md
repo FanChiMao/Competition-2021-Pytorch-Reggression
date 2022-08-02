@@ -130,5 +130,5 @@
 - https://blog.csdn.net/just_sort/article/details/103110806  
 
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=FanChiMao/IMBD_AICUP)  
+![visitors](https://visitor-badge.glitch.me/badge?page_id=IMBD_AICUP)  
 
