@@ -1,4 +1,4 @@
-# Pytorch-2021-IMBD-Reggression
+# [IMBD 2021] Pytorch-2021-IMBD-Reggression
 - [2021全國智慧製造大數據分析競賽](https://imbd2021.thu.edu.tw/)  
 
 ```
