@@ -1,5 +1,5 @@
 # [IMBD 2021] Pytorch-2021-IMBD-Reggression
-- [2021全國智慧製造大數據分析競賽](https://imbd2021.thu.edu.tw/)  
+- [**2021全國智慧製造大數據分析競賽**](https://imbd2021.thu.edu.tw/)  
 
 ```
 └── README.md 
@@ -129,5 +129,5 @@
 - https://shashikachamod4u.medium.com/excel-csv-to-pytorch-dataset-def496b6bcc1  
 - https://blog.csdn.net/just_sort/article/details/103110806  
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=IMBD_AICUP)  
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FFanChiMao%2FCompetition-2021-Pytorch-Reggression&label=visitors&countColor=%232ccce4&style=plastic)  
 
